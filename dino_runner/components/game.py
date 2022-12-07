@@ -6,6 +6,7 @@ from dino_runner.components.dinosaur import Dinosaur
 
 class Game:
     def __init__(self):
+
         pygame.init()
         pygame.display.set_caption(TITLE)
         pygame.display.set_icon(ICON)
@@ -18,7 +19,9 @@ class Game:
         
         self.player = Dinosaur()
 
+
     def run(self):
+
         # Game loop: events - update - draw
         self.playing = True
         while self.playing:
@@ -35,6 +38,7 @@ class Game:
     def update(self):
         user_input= pygame.key.get_pressed()
         self.player.update(user_input)
+
 
     def draw(self):
         self.clock.tick(FPS)
