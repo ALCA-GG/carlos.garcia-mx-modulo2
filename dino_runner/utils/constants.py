@@ -1,16 +1,14 @@
 import pygame
 import os
-
+pygame.mixer.init()
 # Global Constants
 TITLE = "Chrome Dino Runner"
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 FPS = 30
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
-
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
-
 RUNNING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
@@ -23,9 +21,9 @@ RUNNING_SHIELD = [
 
 RUNNING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1Hammer.png")),
-    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2.png")),
 ]
-
+RUNNING_KILLED = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1Hammer.png"))
 JUMPING = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJump.png"))
 JUMPING_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpShield.png"))
 JUMPING_HAMMER = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpHammer.png"))
@@ -60,11 +58,19 @@ BIRD = [
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird1.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird2.png")),
 ]
-
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
+PLAY_GAME = pygame.image.load(os.path.join(IMG_DIR, 'Other/icon.jpg'))
+SOL = pygame.image.load(os.path.join(IMG_DIR, 'Other/eclipse_lunar.png'))
+RESET = pygame.image.load(os.path.join(IMG_DIR, 'Other/Reset.png'))
+GAME_OVER = pygame.image.load(os.path.join(IMG_DIR, 'Other/GameOver.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
+STAR = pygame.image.load(os.path.join(IMG_DIR, 'Other/CRIMSON.jpg'))
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
-
+MUSIC_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
+#MUSIC_KILL = os.path.join(os.path.dirname(__file__), "..", "assets")
+#MUSIC_SHIELD = os.path.join(os.path.dirname(__file__), "..", "assets")
+MUSIC_RUN = os.path.join(os.path.dirname(__file__), "..", "assets")
+#MUSIC_RUN = os.path.join(os.path.dirname(__file__), "..", "assets")
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
@@ -72,3 +78,7 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 DEFAULT_TYPE = "default"
 
 FONT_STYLE = 'freesansbold.ttf'
+
+SHIELD_TYPE = 'shield'
+
+HAMMER_TYPE = 'hammer'
